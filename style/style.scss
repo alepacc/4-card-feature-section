@@ -1,0 +1,122 @@
+// primary colors 
+$red:  hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+// neutral colors
+$grey-500: hsl(234, 12%, 34%);
+$grey-400: hsl(212, 6%, 44%);
+$white: hsl(0, 0%, 100%);
+
+
+body{
+    margin:0;
+    padding:0;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: $grey-400;
+    background-color: $white;
+}
+
+// typography
+@font-face {
+    font-family: 'Poppins';
+    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap') format('truetype');
+    font-weight: 200 400 600;
+    font-style: normal;
+}
+
+h1{
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 600;
+    color: $grey-500;
+    margin:0;
+    line-height: 1.2;
+}
+
+h2{
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 200;
+    color: $grey-400; 
+    margin: 0;
+    line-height: 1.2;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: $grey-500; 
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 500px;
+    gap: 5px;
+    margin: 25px 0;
+    text-align: center;
+
+}
+
+.cards-container{
+    @media (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    display: grid;
+    justify-items: center;
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    width: 300px;
+    border-radius: 5px;
+    margin: 20px;
+    border-top: 5px solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+    &:nth-child(1){
+        border-color: $cyan;
+        grid-column: 1;
+        grid-row: 1/span 2;
+        align-self: center;
+    }
+     &:nth-child(2){
+        border-color: $red;
+        grid-column: 2;
+        grid-row: 1;
+    }
+     &:nth-child(3){
+        border-color: $orange;
+        grid-column: 2;
+        grid-row: 2;
+    }
+     &:nth-child(4){
+        border-color: $blue;
+        grid-column: 3;
+        grid-row: 1/ span 2;
+        align-self: center;
+    }
+
+    &__icon{
+        align-self: flex-end;
+    }
+}
+
