@@ -29,9 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/alepacc/4-card-feature-section](github)
-- Live Site URL: [https://alepacc.github.io/4-card-feature-section/](live-site)
-
+- Solution URL: [github](https://github.com/alepacc/4-card-feature-section)
+- Live Site URL: [live-site](https://alepacc.github.io/4-card-feature-section/)
 
 ### Built with
 
